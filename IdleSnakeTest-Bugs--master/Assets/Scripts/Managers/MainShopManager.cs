@@ -34,7 +34,7 @@ namespace Managers
             _costs[4].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, pathfinding))).ToString();
             _costs[5].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, strongMuscles))).ToString();
             _costs[6].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, fastMetabolism))).ToString();
-            //_currentValue[0].text = greatEyes == 0 ? "0 sec" : (greatEyes == 1) ? (FieldManager.appleCooldown.ToString("f2")+" sec"): $"{FieldManager.appleCooldown - FieldManager.appleCooldown*Mathf.Pow(newFoodPercent, greatEyes-1) :f2} sec";
+            _currentValue[0].text = greatEyes == 0 ? "0 sec" : (greatEyes == 1) ? (FieldManager.appleCooldown.ToString("f2")+" sec"): $"{FieldManager.appleCooldown - FieldManager.appleCooldown*Mathf.Pow(newFoodPercent, greatEyes-1) :f2} sec";
             _currentValue[1].text = $"{foodFinding}%";
             _currentValue[2].text = $"{1 +steelStomach}";
             _currentValue[3].text = $"{100 + 10 * (adrenalineGlands)}%";
