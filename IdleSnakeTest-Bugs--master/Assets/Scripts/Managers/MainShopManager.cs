@@ -28,7 +28,7 @@ namespace Managers
             int strongMuscles = UpgradesManager.StrongMuscles;
             int fastMetabolism = BoostManager.FastMetabolism;
             _costs[0].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, greatEyes))).ToString();
-            _costs[1].text = ((int)(_startCost *Mathf.Pow(_multiplyCost, foodFinding))).ToString();
+            _costs[1].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, foodFinding))).ToString();
             _costs[2].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, steelStomach))).ToString();
             _costs[3].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, adrenalineGlands))).ToString();
             _costs[4].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, pathfinding))).ToString();
@@ -39,7 +39,7 @@ namespace Managers
             _currentValue[2].text = $"{1 +steelStomach}";
             _currentValue[3].text = $"{100 + 10 * (adrenalineGlands)}%";
             _currentValue[4].text = $"{6 + pathfinding }x{6 + pathfinding }";
-            _currentValue[5].text = $"{1 + 0.1 * (strongMuscles - 1)}";
+            _currentValue[5].text = $"{1 + 0.1 * (strongMuscles)}";
             _currentValue[6].text = $"{300 + 10 * (fastMetabolism)}%";
             _level[0].text = greatEyes.ToString()+" lvl";
             _level[1].text = foodFinding.ToString() + " lvl";
@@ -51,8 +51,7 @@ namespace Managers
         }
         public void BuyGreatEyes()
         {
-            _currentValue[0].text =
-                FieldManager.appleCooldown.ToString();
+            _currentValue[0].text = FieldManager.appleCooldown.ToString();
         }
 
         public void UpgradeGreatEyes()
