@@ -217,8 +217,6 @@ namespace Managers
 
         private void SpawnRandomApple()
         {
-            Debug.Log("BUTTON PRESSED");
-            
             if (_appleList.Count >= Mathf.Floor(_appleMax - 1)) return;
             Vector2Int id = new Vector2Int(Random.Range(0, _fieldSize), Random.Range(0, _fieldSize));
             while (_cellSnake.IndexOf(id) != -1 || _appleList.Find(x => x.appleId == id) != null)
